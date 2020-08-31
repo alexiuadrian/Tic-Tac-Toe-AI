@@ -34,7 +34,6 @@ class Joc:
 	GOL = '#'
 	def __init__(self, tabla=None):
 		if tabla is not None:
-			#print('-----------------', tabla, '-----------------')
 			self.matr = tabla
 		else:
 			self.matr = [Joc.GOL]*9
@@ -71,16 +70,9 @@ class Joc:
 		"""
 		l_mutari = []
 
-		### TO DO ...
-
-		#locuri_libere = []
-
 		for i in range(0, len(self.matr)):
 			if self.matr[i] == '#':
 				l_mutari.append(modif_joc(self.matr, i, jucator))
-
-		# for el in l_mutari:
-		# 	print(el.matr)
 
 		return l_mutari
 	
@@ -288,7 +280,7 @@ def afis_daca_final(stare_curenta):
 		if (final=="remiza"):
 			print("Remiza!")
 		else:
-			print("A castigat "+final)
+			print("A castigat " + final)
 			
 		return True
 		
